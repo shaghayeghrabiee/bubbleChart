@@ -1,7 +1,8 @@
 import React from "react";
 import TableContent from "./TableContent1";
-import ChartBubble from "./ChartBubble";
+import ChartD3 from "./ChartD3";
 import { apiData } from "./staticData";
+import BubbleChart from "./BubbleChart";
 
 
 const Landing = () => {
@@ -9,7 +10,8 @@ const Landing = () => {
   return (
     <div>
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
-        <ChartBubble data={apiData} />
+        {/* <ChartD3 data={apiData} /> */}
+        <BubbleChart/>
         <TableContent />
       </div>
     </div>

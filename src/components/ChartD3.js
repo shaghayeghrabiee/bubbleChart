@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import * as d3 from "d3";
 import { forceSimulation, forceCollide } from "d3-force"; 
 
-const BubbleChart = ({ data }) => {
+const ChartD3 = ({ data }) => {
   const svgRef = useRef();
 
   useEffect(() => {
@@ -114,4 +114,4 @@ const BubbleChart = ({ data }) => {
   );
 };
 
-export default BubbleChart;
+export default ChartD3;
