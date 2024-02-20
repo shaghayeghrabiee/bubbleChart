@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { apiData } from "./staticData";
 import Highcharts from "highcharts";
 
@@ -34,9 +34,7 @@ const BubbleChart = () => {
     setSelectedBubble(event.point);
     setOpen(true);
   };
-  useEffect(() => {
-    console.log(selectedBubble);
-  }, [selectedBubble]);
+
   const chartOptions = {
     chart: {
       type: "packedbubble",
@@ -66,14 +64,14 @@ const BubbleChart = () => {
         dataLabels: {
           enabled: true,
           formatter: function () {
-            return `
+             const contentHTML = `
             <div>
-            <img src="${this.point.iconURL}"/>
-            </br/>
             ${this.point.symbol}
             </br>
             ${this.point.value}
-           </div>`;
+            </div>
+              `;
+             return contentHTML;
           },
           style: {
             color: "#f7f7f7",

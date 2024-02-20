@@ -1,22 +1,11 @@
 import axios from "axios";
 
-const getData = async () => {
-  const requestData = {
-    method: "GET",
-    url: "https://yahoo-finance15.p.rapidapi.com/api/v1/markets",
-    params: { search: "AA" },
-    headers: {
-      "X-RapidAPI-Key": "SIGN-UP-FOR-KEY",
-      "X-RapidAPI-Host": "yahoo-finance15.p.rapidapi.com",
-    },
-  };
+const BASE_URL =
+  "https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&order=market_cap_desc&per_page=200&page=1&sparkline=false";
 
-  try {
-    const response = await axios.request(requestData);
-    return response.data;
-  } catch (error) {
-    throw error; 
-  }
+const getData = async () => {
+  const response = await axios.get(BASE_URL);
+  return response.data;
 };
 
-export default getData;
+export { getData };

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import HighchartsReact from "highcharts-react-official";
-import './ChartPlus.css';
+import './Chart.css';
 
 const Chart = ({ options, highcharts}) => {
   const chartRef = useRef(null);
