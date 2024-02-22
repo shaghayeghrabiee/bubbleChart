@@ -7,6 +7,7 @@ import Chart from "./Chart";
 import exporting from "highcharts/modules/exporting";
 import highchartsMore from "highcharts/highcharts-more";
 import Modal from "./Modal";
+import "../App.css";
 
 exporting(Highcharts);
 highchartsMore(Highcharts);
@@ -21,8 +22,13 @@ const transformData = () => {
     marketCap: item.market_cap,
     color: "transparent",
     marker: {
-      lineWidth: 4,
-      lineColor: item.price_change_percentage_24h > 0 ? "green" : "red",
+      lineColor: item.price_change_percentage_24h > 0 ? "green" : "#C41E3A",
+      states: {
+        hover: {
+          enabled: true,
+          lineColor: "white",
+        },
+      },
     },
   }));
 };
@@ -56,6 +62,7 @@ const BubbleChart = () => {
         maxSize: "80%",
         zMin: 0,
         zMax: 1000,
+        // className: "custom-chart",
         layoutAlgorithm: {
           splitSeries: false,
           gravitationalConstant: 0.02,
@@ -64,20 +71,20 @@ const BubbleChart = () => {
         dataLabels: {
           enabled: true,
           formatter: function () {
-             const contentHTML = `
+            const contentHTML = `
             <div>
             ${this.point.symbol}
             </br>
             ${this.point.value}
             </div>
               `;
-             return contentHTML;
+            return contentHTML;
           },
           style: {
             color: "#f7f7f7",
             textOutline: "none",
             fontWeight: "bold",
-            fontSize: "20px",
+            fontSize: "15px",
           },
         },
         point: {

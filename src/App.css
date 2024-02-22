@@ -3,31 +3,7 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
+
 body{
     background-color: rgb(35, 35, 35);
-}
-
-.bubble-chart {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-canvas {
-  max-width: 100%;
-  height: auto;
-}
-.bubble.green {
-  stroke: green;
-  filter:drop-shadow(0 0 5px rgba(0, 255, 0, 0.9));
-  /*box-shadow:inset 0 0 10px rgba(0, 255, 0, 0.9);*/
-  -webkit-filter:drop-shadow(0 0 5px rgba(0, 255, 0, 0.9));
-  -webkit-filter:drop-shadow(0 0 5px rgba(0, 255, 0, 0.9));
-}
-
-.bubble.red {
-  stroke: rgb(232, 54, 54);
-  /*box-shadow:inset 0 0 20px rgba(255, 0, 0, 0.7);*/
-  filter:drop-shadow(00 0 5px rgba(232, 54, 54,0.7));
-  -webkit-filter:drop-shadow(00 0 5px rgba(232, 54, 54,0.7));
 }

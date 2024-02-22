@@ -443,7 +443,7 @@ g.highcharts-series,
 }
 
 .highcharts-point {
-    stroke-width: 1px;
+    stroke-width: 3px;
 }
 
 .highcharts-dense-data .highcharts-point {
@@ -1216,3 +1216,11 @@ g.highcharts-series,
     stroke: var(--highcharts-neutral-color-20);
     stroke-width: 1px;
 }
+.highcharts-point{
+    filter: drop-shadow(0 0px 3px rgba(255, 255, 255,0.9));
+    -webkit-filter: drop-shadow(0 0px 3px rgba(255, 255, 255,0.9));
+}
+/* .highcharts-point-hover{
+     filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.9));
+     -webkit-filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.9));
+} */
