@@ -70,8 +70,9 @@ const BubbleChart = () => {
         dataLabels: {
           enabled: true,
           formatter: function () {
-          const fontSizeClass = this.point.changes > 0 ? "fontSizeLarge" : "fontSizeSmall";
-          const contentHTML = `
+            const fontSizeClass =
+              this.point.changes > 0 ? "fontSizeLarge" : "fontSizeSmall";
+            const contentHTML = `
             <div class="${fontSizeClass}">
             ${this.point.symbol}
             </br>
@@ -95,6 +96,7 @@ const BubbleChart = () => {
     },
     series: [
       {
+        showInLegend: false,
         data: transformData(),
       },
     ],
