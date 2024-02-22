@@ -7,3 +7,29 @@
 body{
     background-color: rgb(35, 35, 35);
 }
+.fontSizeLarge {
+    font-size: 15px;
+}
+
+.fontSizeSmall {
+    font-size: 10px;
+}
+
+/* Define font sizes for different screen sizes */
+@media (max-width: 768px) {
+  .fontSizeLarge {
+        font-size: 11px; 
+    }
+    .fontSizeSmall {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 480px) {
+  .fontSizeLarge {
+        font-size: 7px; 
+    }
+    .fontSizeSmall {
+        font-size: 5px;
+    }
+}

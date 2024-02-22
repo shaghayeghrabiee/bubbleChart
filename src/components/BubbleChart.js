@@ -62,7 +62,6 @@ const BubbleChart = () => {
         maxSize: "80%",
         zMin: 0,
         zMax: 1000,
-        // className: "custom-chart",
         layoutAlgorithm: {
           splitSeries: false,
           gravitationalConstant: 0.02,
@@ -71,8 +70,9 @@ const BubbleChart = () => {
         dataLabels: {
           enabled: true,
           formatter: function () {
-            const contentHTML = `
-            <div>
+          const fontSizeClass = this.point.changes > 0 ? "fontSizeLarge" : "fontSizeSmall";
+          const contentHTML = `
+            <div class="${fontSizeClass}">
             ${this.point.symbol}
             </br>
             ${this.point.value}
@@ -84,7 +84,6 @@ const BubbleChart = () => {
             color: "#f7f7f7",
             textOutline: "none",
             fontWeight: "bold",
-            fontSize: "15px",
           },
         },
         point: {

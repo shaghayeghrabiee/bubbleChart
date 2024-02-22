@@ -307,17 +307,17 @@ export const apiData = [
     price_change_percentage_24h: -1.09356,
   },
 
-  // {
-  //   id: 26,
-  //   symbol: "atom",
-  //   name: "Cosmos Hub",
-  //   image:
-  //     "https://assets.coingecko.com/coins/images/1481/large/cosmos_hub.png?1696502525",
-  //   current_price: 8.47,
-  //   market_cap: 242778,
-  //   total_volume: 13713,
-  //   price_change_percentage_24h: 0.56,
-  // },
+  {
+    id: 26,
+    symbol: "atom",
+    name: "Cosmos Hub",
+    image:
+      "https://assets.coingecko.com/coins/images/1481/large/cosmos_hub.png?1696502525",
+    current_price: 8.47,
+    market_cap: 242778,
+    total_volume: 13713,
+    price_change_percentage_24h: 0.56,
+  },
 
   {
     id: 27,
